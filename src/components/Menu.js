@@ -1,11 +1,22 @@
 import React from 'react'
+import useContextMenu from '../Hooks/useContextMenu'
 
-function Menu () {
-    return(
-        <div className="App-menu">
-        <h1> ExcelSense Technical Test </h1>
-        </div>
-    )
+const Menu = ({outerRef}) => {
+    const { xPos, yPos, menu, dataId } = useContextMenu(outerRef);
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        console.log(e.target)
+        console.log("clickkkk", dataId)
+    }
+    if (menu) {
+        return (
+          <ul className="menu" style={{ top: yPos, left: xPos }}>
+            <li onClick={handleClick} > TEST Console ID: { dataId } </li>
+          </ul>
+        );
+      }
+      return <></>;
 }
 
-export default Menu;
+export default Menu; 

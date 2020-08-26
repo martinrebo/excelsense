@@ -4,13 +4,13 @@ import './App.css';
 import { Switch, Route, BrowserRouter as Router, } from 'react-router-dom'
 import Assets from './routes/Assets'
 import Entities from './routes/Entities'
-import Menu from './components/Menu'
+import HeroBanner from './components/HeroBanner'
 
 
 function App() {
   return (
     <div className="App">
-      <Menu />
+      <HeroBanner />
       <Router>
         <Switch>
           <Route exact path='/'> <Assets /> </Route>

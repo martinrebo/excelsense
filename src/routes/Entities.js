@@ -1,10 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import useDataApi from 'use-data-api';
+import EntitiesView from '../components/EntitiesView';
 
 
 
-function Entities(props) {
+function Entities() {
 
     let { entityId } = useParams();
 
@@ -14,53 +15,23 @@ function Entities(props) {
     );
     const filteredEntities = data.entities.filter(entitity => entitity.id_asset === parseInt(entityId))
 
-
-
     const getKeys = () => {
         if (data.entities.length > 0) {
             return Object.keys(data.entities[0])
         }
     }
     const columns = getKeys()
-    console.log(columns)
-    console.log(filteredEntities)
-    // console.log(entityId)
 
     return (
         <>
+            {isLoading ? "...Loading" :
+                <EntitiesView
+                    filteredEntities={filteredEntities}
+                    isLoading={isLoading}
+                    isError={isError}
+                    columns={columns} />
 
-            {/* <HeaderEntity columns={columns} /> */}
-            <div className="entity-grid">
-
-            <span className="header"> Popup </span>
-                {columns ? columns.map((column, index) => {
-                    return (
-                        <>
-                            <span className="header" key={index}> {column} </span>
-                        </>
-                    )
-                }) : "no columns"
-
-                }
-               
-
-                {isLoading ? "...loading" : filteredEntities.map((entities, index) => {
-                    let objectKey = Object.keys(entities)
-                    return (
-                        <>
-                         <span> Popup </span>
-                            {objectKey.map((property, i) => {
-                                return (<span> {entities[property]} </span>)
-                            })}
-                           
-                        </>
-
-                    )
-
-                })}
-
-                {isError ? "...There is a problem" : ""}
-            </div>
+            }
         </>
     )
 }
