@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './AssetsView.css'
 
-function GridView(props) {
+function AssetsView(props) {
     return(
         <div className="grid">
             <span> {props.asset.id} </span>
@@ -14,4 +15,4 @@ function GridView(props) {
     )
 }
 
-export default GridView;
+export default AssetsView;

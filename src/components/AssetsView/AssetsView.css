@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .grid > span {
+    padding: 3px;
+    background-color: #fff;
+  }
+  
+  .grid .header {
+    font-weight: bold;
+    background-color: #282c34;
+    color: white;
+  }
+  

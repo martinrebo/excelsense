@@ -4,7 +4,7 @@ import './App.css';
 import { Switch, Route, BrowserRouter as Router, } from 'react-router-dom'
 import Assets from './routes/Assets'
 import Entities from './routes/Entities'
-import HeroBanner from './components/HeroBanner'
+import HeroBanner from './components/HeroBanner/HeroBanner'
 
 
 function App() {

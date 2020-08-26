@@ -1,0 +1,19 @@
+
+.menu {
+    background-color: #282c34;
+    border-radius: 2px;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    list-style: none;
+  }
+  
+  .menu li {
+    padding: 20px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    background-color: #f2f2f2;
+  }

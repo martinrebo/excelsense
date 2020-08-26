@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import useDataApi from 'use-data-api';
-import EntitiesView from '../components/EntitiesView';
+import EntitiesView from '../components/EntitiesView/EntitiesView';
 
 
 

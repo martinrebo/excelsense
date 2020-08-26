@@ -1,0 +1,31 @@
+
+
+
+
+
+.entity-grid {
+    display: grid;
+    grid-template-columns: repeat(63, 1fr);
+    grid-template-rows: 3fr ;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    
+  }
+  
+  .entity-grid > span {
+  max-width: 100px;
+    overflow-wrap: break-word;
+    padding: 3px;
+    background-color: #fff;
+  }
+  
+  .entity-grid .header {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    background-color: #282c34;
+    color: white;
+    
+  
+  }
+  

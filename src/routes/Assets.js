@@ -1,7 +1,7 @@
 import React from 'react'
 import useDataApi from 'use-data-api';
-import AssetsView from '../components/AssetsView';
-import Header from '../components/Header';
+import AssetsView from '../components/AssetsView/AssetsView';
+import HeaderAssetsView from '../components/AssetsView/HeaderAssetsView';
 
 
 
@@ -19,7 +19,7 @@ function Assets() {
     console.log(columns)
     return (
         <>
-        <Header columns={columns}/>
+        <HeaderAssetsView columns={columns}/>
             {isLoading ? "...loading" : data.assets.map((asset, index) => {
                 return (
                     <AssetsView key={index} asset={asset}/>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header(props) {
+function HeaderAssetsView(props) {
 
     return (
         <div className="grid">
@@ -20,4 +20,4 @@ function Header(props) {
 
 }
 
-export default Header;
+export default HeaderAssetsView;

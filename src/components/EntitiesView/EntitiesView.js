@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
-import Menu from '../components/Menu'
+import Menu from '../Menu/Menu'
+import './EntitiesView.css'
 
 
 const EntitiesView = ({ columns, isLoading, isError, filteredEntities }) => {
