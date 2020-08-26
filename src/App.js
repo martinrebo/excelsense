@@ -9,9 +9,9 @@ import HeroBanner from './components/HeroBanner/HeroBanner'
 
 function App() {
   return (
-    <div className="App">
-      <HeroBanner />
+    <div className="App">    
       <Router>
+      <HeroBanner />
         <Switch>
           <Route exact path='/'> <Assets /> </Route>
           <Route path='/entity/:entityId'> <Entities /> </Route>

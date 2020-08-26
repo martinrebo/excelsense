@@ -1,13 +1,13 @@
 import React from 'react'
 import './HeroBanner.css'
-
+import { Link } from 'react-router-dom'
 
 function HeroBanner() {
     return (
         <div className="herobanner">
             <h1> ExcelSense Technical Test </h1>
-            <a className="link" href="/"> Assets </a>
-            <a className="link" href="/entity/nofilter/"> Entities </a>
+            <Link className="link" to="/"> Assets </Link>
+            <Link className="link" to="/entity/nofilter/"> Entities </Link>
 
         </div>
     )
