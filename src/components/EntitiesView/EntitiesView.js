@@ -4,8 +4,8 @@ import './EntitiesView.css'
 
 
 const EntitiesView = ({ columns, isLoading, isError, filteredEntities }) => {
+   
     const outerRef = useRef(null);
-
 
     return (
         <div ref={outerRef}>

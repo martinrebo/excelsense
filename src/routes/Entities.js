@@ -2,19 +2,24 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import useDataApi from 'use-data-api';
 import EntitiesView from '../components/EntitiesView/EntitiesView';
+import Modal from '../components/Modal/Modal';
 
 
 
 function Entities() {
-
+    /* get url browser parameter to filter data */
     let { entityId } = useParams();
 
+    /* Use Fetch hook to call REST API */ 
     const [{ data, isLoading, isError }, doFetch] = useDataApi(
         '/api/entities',
         { entities: [] },
     );
-    const filteredEntities = data.entities.filter(entitity => entitity.id_asset === parseInt(entityId))
 
+    /* Filter data based on url parameter */ 
+    const filteredEntities = data.entities.filter(entitity => entitity.id_asset === parseInt(entityId))
+    
+    /* get the object keys of the data to construct the header of table*/
     const getKeys = () => {
         if (data.entities.length > 0) {
             return Object.keys(data.entities[0])
@@ -32,6 +37,7 @@ function Entities() {
                     columns={columns} />
 
             }
+            <Modal fields={columns} />
         </>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import useDataApi from 'use-data-api';
 import AssetsView from '../components/AssetsView/AssetsView';
 import HeaderAssetsView from '../components/AssetsView/HeaderAssetsView';
+import Modal from '../components/Modal/Modal';
 
 
 
@@ -27,6 +28,7 @@ function Assets() {
             })}
 
             {isError ? "...There is a problem" : ""}
+            <Modal fields={columns} />
         </>
     )
 }
