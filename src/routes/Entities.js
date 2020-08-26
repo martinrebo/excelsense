@@ -9,16 +9,24 @@ import Modal from '../components/Modal/Modal';
 function Entities() {
     /* get url browser parameter to filter data */
     let { entityId } = useParams();
-
-    /* Use Fetch hook to call REST API */ 
+    let filteredEntities;
+    /* Use Fetch hook to call REST API */
     const [{ data, isLoading, isError }, doFetch] = useDataApi(
         '/api/entities',
         { entities: [] },
     );
 
-    /* Filter data based on url parameter */ 
-    const filteredEntities = data.entities.filter(entitity => entitity.id_asset === parseInt(entityId))
-    
+    console.log("entityid", entityId)
+
+    /* Filter data based on url parameter */
+    if (entityId === "nofilter") {
+        filteredEntities = data.entities
+
+    } else {
+        filteredEntities = data.entities.filter(entitity => entitity.id_asset === parseInt(entityId))
+    }
+
+
     /* get the object keys of the data to construct the header of table*/
     const getKeys = () => {
         if (data.entities.length > 0) {
@@ -26,6 +34,7 @@ function Entities() {
         }
     }
     const columns = getKeys()
+
 
     return (
         <>

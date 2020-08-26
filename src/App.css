@@ -3,5 +3,6 @@
     grid-template-columns: 1fr;
     grid-gap: 5px;
     background-color: rgb(238, 239, 255);
+    font-size: 10px;
 }
 

@@ -7,9 +7,9 @@ function HeaderAssetsView(props) {
             {props.columns ?
                 props.columns.map((column, index) => {
                     return (
-                        <>
+                        
                     <span className="header" key={index}> {column} </span> 
-                    </>
+                    
                     )
                 }) 
                 : " No column"

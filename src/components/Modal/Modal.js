@@ -36,7 +36,7 @@ const Modal = ({ fields }) => {
                 : <></>}
 
 
-            <div class="modal-button">
+            <div className="modal-button">
                 <button onClick={handleClick}> <span role="img"> ✏️</span>  </button>
             </div>
         </>

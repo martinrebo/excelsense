@@ -1,7 +1,20 @@
 .herobanner {
-    padding: 50px 10px;
+    padding: 20px 10px;
     background-color: #282c34;
     color: #fff;
+    display: inline-block;
+  }
+
+  .herobanner h1 {
+    display: inline-block;
+    padding: 0 20px;
   }
   
+  .link {
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid violet;
+    margin: 5px;
+display: inline;
+  }
   
