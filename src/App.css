@@ -1,0 +1,57 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    background-color: rgb(238, 239, 255);
+}
+
+.App-menu {
+  padding: 50px 10px;
+  background-color: #282c34;
+  color: #fff;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
+}
+
+.grid > span {
+  padding: 3px;
+  background-color: #fff;
+}
+
+.grid .header {
+  font-weight: bold;
+  background-color: #282c34;
+  color: white;
+}
+
+
+
+
+.entity-grid {
+  display: grid;
+  grid-template-columns: repeat(64, 1fr);
+  grid-template-rows: 3fr ;
+  grid-gap: 5px;
+  
+}
+
+.entity-grid > span {
+
+  overflow-wrap: break-word;
+  padding: 3px;
+  background-color: #fff;
+}
+
+.entity-grid .header {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  background-color: #282c34;
+  color: white;
+
+}
