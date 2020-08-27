@@ -3,27 +3,40 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
 
-app.use(bodyParser.json());
+const assets = require('./data/assets.json')
+const entities = require('./data/entities.json')
 
-app.use(express.static(path.join(__dirname, 'build')));
 
+// // Bodyparser middleware
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: false
+//   })
+// );
+// app.use(bodyParser.json());
+// app.use(express.json());
 
-app.get('/ping', function (req, res) {
- return res.send('pong');
-});
-
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-
-app.get('/api/assets', function(req, res) {
-    res.sendFile(path.join(__dirname, 'data', 'assets.json' ))
+app.route('/api/assets').get( function (req, res) {
+  res.json(assets)
 })
 
-app.get('/api/entities', function(req, res) {
-    res.sendFile(path.join(__dirname, 'data', 'entities.json' ))
+app.route('/api/entities').get(function (req, res) {
+  res.json(entities)
 })
 
 
-app.listen(process.env.PORT || 8080);
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+//Engine-specified port, or 8080 otherwise
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`);
+});
