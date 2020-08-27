@@ -2,7 +2,7 @@
 Project created as part of a job interview at Excelsense.
 
 Deployed at GAE: https://excelsense.ey.r.appspot.com/
-Github Repository: 
+Github Repository: https://github.com/martinrebo/excelsense
 
 ## Uses: 
 - create-react-app / React Hooks

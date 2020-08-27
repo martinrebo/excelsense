@@ -21,10 +21,17 @@ const useContextMenu = outerRef => {
     [showMenu, outerRef, setXPos, setYPos]
   );
 
+  const handleClick = useCallback((e) => {
+    
+    showMenu(false);
+
+  }, [showMenu]);
 
   useEffect(() => {
+    document.addEventListener("click", handleClick);
     document.addEventListener("contextmenu", handleContextMenu);
     return () => {
+      document.removeEventListener("click", handleClick);
       document.removeEventListener("contextmenu", handleContextMenu);
     };
   }, []);

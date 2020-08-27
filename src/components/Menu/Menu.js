@@ -7,7 +7,6 @@ const Menu = ({ outerRef }) => {
 
     const handleClick = (e) => {
         e.preventDefault()
-        console.log(e.target)
         console.log("Context Menu Test ID:", dataId)
     }
     if (menu) {
