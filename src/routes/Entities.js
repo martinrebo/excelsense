@@ -15,9 +15,7 @@ function Entities() {
         '/api/entities',
         { entities: [] },
     );
-
-    console.log("entityid", entityId)
-
+    
     /* Filter data based on url parameter */
     if (entityId === "nofilter") {
         filteredEntities = data.entities
