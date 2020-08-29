@@ -1,26 +1,29 @@
-.entity-grid {
+.grid-view {
     display: grid;
-    grid-template-columns: repeat(63, minmax( 100px, 1fr));
+    /* 
+    This line is added programatically depending on the number of columns of data
+    grid-template-columns: repeat(63, minmax( 100px, 1fr)); 
+    
+    */
     grid-column-gap: 5px;
     grid-row-gap: 10px;   
     overflow: visible;
 
   }
   
-  .entity-grid > span {
+  .grid-view > span {
 
     overflow-wrap: break-word;
     padding: 3px;
-    background-color: #fff;
+    /* background-color: #fff; */
   }
 
   
   
-  .entity-grid .header {
+  .grid-view .header {
     font-weight: bold;
     overflow-wrap: break-word;
     background-color: #282c34;
     color: white;
   
   }
-  

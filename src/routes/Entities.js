@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { useParams } from 'react-router-dom'
 import useDataApi from 'use-data-api';
-import EntitiesView from '../components/EntitiesView/EntitiesView';
 import Modal from '../components/Modal/Modal';
+import GridView from '../components/GridView/GridView';
+import Menu from '../components/Menu/Menu';
 
 
 
 function Entities() {
+
     /* get url browser parameter to filter data */
     let { entityId } = useParams();
     let filteredEntities;
@@ -33,17 +35,17 @@ function Entities() {
     }
     const columns = getKeys()
 
-
+    // Get reference for right Click context Menu
+    const outerRef = useRef(null);
     return (
         <div className="grid-content">
-            {isLoading ? "...Loading" :
-                <EntitiesView
-                    filteredEntities={filteredEntities}
+           <Menu outerRef={outerRef}></Menu>
+                <GridView
+                    dataSet={filteredEntities}
                     isLoading={isLoading}
                     isError={isError}
                     columns={columns} />
 
-            }
             <Modal fields={columns} />
         </div>
     )

@@ -17,3 +17,15 @@
 .grid-content {
     grid-column: 2/3;
 }
+
+
+
+  .nightmode {
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .daymode {
+    background-color: #fff;
+    color: #282c34;
+  }

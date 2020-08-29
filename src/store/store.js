@@ -2,7 +2,7 @@
 import React, {createContext, useReducer} from 'react';
 
 const initialState = {
-    layout: "large",
+    compact: false,
     nightmode: false
 };
 const store = createContext(initialState);
@@ -11,10 +11,10 @@ const { Provider } = store;
 const StateProvider = ( { children } ) => {
   const [state, dispatch] = useReducer((state, action) => {
     switch(action.type) {
-      case 'CHANGE_VIEW_LAYOUT':
-        return {...state, layout: action.payload};
-        case 'CHANGE_VIEW_COLOR':
-            return {...state, color: action.payload};
+      case 'CHANGE_VIEW_COMPACT':
+        return {...state, compact: action.payload};
+        case 'CHANGE_VIEW_MODE':
+            return {...state, nightmode: action.payload};
       default:
         throw new Error();
     };

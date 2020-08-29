@@ -1,8 +1,7 @@
 import React from 'react'
 import useDataApi from 'use-data-api';
-import AssetsView from '../components/AssetsView/AssetsView';
-import HeaderAssetsView from '../components/AssetsView/HeaderAssetsView';
 import Modal from '../components/Modal/Modal';
+import GridView from '../components/GridView/GridView';
 
 function Assets() {
     /* Get Api call to assets */
@@ -21,15 +20,14 @@ function Assets() {
     return (
         <div className="grid-content">
             <div className="grid-assets">
-                <HeaderAssetsView columns={columns} />
-                {isLoading ? "...loading" : data.assets.map((asset, index) => {
-                    return (
-                        <AssetsView key={index} asset={asset} />
-                    )
-                })}
 
-                {isError ? "...There is a problem" : ""}
-
+                <GridView
+                dataSet = {data.assets}
+                isLoading = {isLoading}
+                isError = {isError}
+                columns = {columns}
+                isLinked = {true}
+                />
             </div>
             <Modal fields={columns} />
         </div>
