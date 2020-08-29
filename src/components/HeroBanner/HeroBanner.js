@@ -25,11 +25,12 @@ console.log(globalState.state)
                 <h1> ExcelSense Technical Test </h1>
                 <Link className="link" to="/"> Assets </Link>
                 <Link className="link" to="/entity/nofilter/"> Entities </Link>
-                <button onClick={handleViewClick}> <span> 
+               
+               <button onClick={handleViewClick} className="button-view"> <span> 
                     { globalState.state.compact ? "👁️👁️ " : "👀" }
                     
                     </span>   </button>
-                <button onClick= {handleModeClick}> <span>
+                <button onClick= {handleModeClick} className="button-mode" > <span>
                 { globalState.state.nightmode ? "☀️ " : "🌙" }
                      
                      </span> </button>

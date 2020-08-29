@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import useDataApi from 'use-data-api';
 import Modal from '../components/Modal/Modal';
@@ -39,14 +39,16 @@ function Entities() {
     const outerRef = useRef(null);
     return (
         <div className="grid-content">
-           <Menu outerRef={outerRef}></Menu>
+            <div ref={outerRef}> 
+            <Menu outerRef={outerRef}/>
                 <GridView
                     dataSet={filteredEntities}
                     isLoading={isLoading}
                     isError={isError}
                     columns={columns} />
-
+           
             <Modal fields={columns} />
+            </div>
         </div>
     )
 }

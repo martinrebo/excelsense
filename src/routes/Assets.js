@@ -20,7 +20,6 @@ function Assets() {
     return (
         <div className="grid-content">
             <div className="grid-assets">
-
                 <GridView
                 dataSet = {data.assets}
                 isLoading = {isLoading}

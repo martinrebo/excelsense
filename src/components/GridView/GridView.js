@@ -21,7 +21,6 @@ const GridView = ({ columns, isLoading, isError, dataSet, isLinked }) => {
     // When nightmode is true, we add the class nightmode 
     let nightmode = globalState.state.nightmode ? "nightmode" : "daymode"
 
-    console.log(dataSet)
     return (
 
         <div className={`grid-view`} style={style}>
@@ -46,7 +45,7 @@ const GridView = ({ columns, isLoading, isError, dataSet, isLinked }) => {
                         })
                         }
                         {isLinked ?
-                            <span className={`${nightmode}`}>  <Link to={`/entity/${data?.id}`}> Link_To_Entitie {data?.id} </Link></span>
+                            <span className={`${nightmode}`}>  <Link className={`${nightmode}`} to={`/entity/${data?.id}`}> Link_To_Entitie {data?.id} </Link></span>
                             : null}
                     </>
                 )

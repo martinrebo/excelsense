@@ -28,4 +28,14 @@
     margin: 5px;
     display: inline;
   }
+
+  .button-mode {
+    right: 7vw;
+    position: absolute;
+  }
+
+  .button-view {
+    right: 11vw;
+    position: absolute;
+  }
   

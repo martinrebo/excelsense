@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-gap: 1px;
-    background-color: rgb(238, 239, 255);
+
     font-size: 12px;
 
     grid-template-rows: minmax(75px, 1fr);
@@ -19,9 +19,15 @@
 }
 
 
+.App-daymode {
+  background-color: rgb(238, 239, 255);
+}
+.App-nightmode {
+  background-color: #1f2229;
+}
 
   .nightmode {
-    background-color: #282c34;
+    background-color: #30353f;
     color: white;
   }
   
