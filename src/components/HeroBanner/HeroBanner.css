@@ -1,13 +1,24 @@
-.herobanner {
-    padding: 20px 10px;
+.heroBanner {
     background-color: #282c34;
     color: #fff;
-    display: inline-block;
+    grid-column: 1/4;
+    /* grid-template-rows: minmax(100vw, 1fr); */
+    border: 1px solid red;
+    /* grid-auto-columns: minmax(100vw, auto); */
   }
 
-  .herobanner h1 {
-    display: inline-block;
+  .heroContent {
+    position: fixed;
+    border: 1px solid blue;
+    width: 100%;
+    background-color: #282c34;
+    padding: 20px;
+  }
+
+  .heroBanner h1 {
+    display: inline;
     padding: 0 20px;
+
   }
   
   .link {
@@ -15,6 +26,6 @@
     padding: 10px 20px;
     border: 1px solid violet;
     margin: 5px;
-display: inline;
+    display: inline;
   }
   

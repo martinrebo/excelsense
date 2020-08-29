@@ -3,7 +3,7 @@ import React from 'react'
 function HeaderAssetsView(props) {
 
     return (
-        <div className="grid">
+        <>
             {props.columns ?
                 props.columns.map((column, index) => {
                     return (
@@ -15,7 +15,7 @@ function HeaderAssetsView(props) {
                 : " No column"
             }
             <span className="header"> Link to Entities </span>
-        </div>
+        </>
     )
 
 }

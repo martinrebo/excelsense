@@ -11,7 +11,6 @@ const EntitiesView = ({ columns, isLoading, isError, filteredEntities }) => {
         <div ref={outerRef}>
             <Menu outerRef={outerRef}></Menu>
             <div className="entity-grid">
-
                 {columns ? columns.map((column, index) => {
                     return (
                         <>
@@ -21,6 +20,8 @@ const EntitiesView = ({ columns, isLoading, isError, filteredEntities }) => {
                 }) : " "
 
                 }
+
+
                 {isLoading ? "...loading" : filteredEntities.map((entities, index) => {
                     let objectKey = Object.keys(entities)
                     return (

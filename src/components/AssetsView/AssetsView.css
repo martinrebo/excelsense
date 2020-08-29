@@ -1,15 +1,26 @@
-.grid {
+.grid-assets-large {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 5px;
+    grid-template-columns: repeat(6, minmax(50px, 1fr)); 
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;  
+
+
+  }
+
+  .grid-assets {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, min-content)); 
+    grid-column-gap: 5px;
+    grid-row-gap: 10px; 
+
   }
   
-  .grid > span {
-    padding: 3px;
+  .grid-assets > span {
+    padding: 5px;
     background-color: #fff;
   }
-  
-  .grid .header {
+
+  .grid-assets .header {
     font-weight: bold;
     background-color: #282c34;
     color: white;

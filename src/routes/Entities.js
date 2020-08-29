@@ -15,7 +15,7 @@ function Entities() {
         '/api/entities',
         { entities: [] },
     );
-    
+
     /* Filter data based on url parameter */
     if (entityId === "nofilter") {
         filteredEntities = data.entities
@@ -35,7 +35,7 @@ function Entities() {
 
 
     return (
-        <>
+        <div className="grid-content">
             {isLoading ? "...Loading" :
                 <EntitiesView
                     filteredEntities={filteredEntities}
@@ -45,7 +45,7 @@ function Entities() {
 
             }
             <Modal fields={columns} />
-        </>
+        </div>
     )
 }
 

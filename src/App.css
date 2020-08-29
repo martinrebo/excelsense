@@ -1,8 +1,19 @@
 .App {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 1px;
     background-color: rgb(238, 239, 255);
-    font-size: 10px;
+    font-size: 12px;
+
+    grid-template-rows: minmax(75px, 1fr);
+  
+    overflow-x: scroll;
+
+    scroll-snap-type: x proximity;
+
+    grid-auto-columns: minmax(50px, auto);
 }
 
+.grid-content {
+    grid-column: 2/3;
+}
