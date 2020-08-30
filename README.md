@@ -1,28 +1,46 @@
 # DESCRIPTION
 Project created as part of a job interview at Excelsense.
 
-Deployed at GAE: https://excelsense.ey.r.appspot.com/
-Github Repository: https://github.com/martinrebo/excelsense
+- Deployed at GAE: https://excelsense.ey.r.appspot.com/
+- Github Repository: https://github.com/martinrebo/excelsense
 
-## Uses: 
+## Main user stories
+
+- It has a reusable component <GridView /> that displays a table (CSS grid)
+- The User can toggle a "Compact" view and a "Nightmode" view. (Context API ) 
+- When the User right-click on the entities page, he can see a Context Menu (Hooks)
+- A link from the assests takes the user to a filtered view of entities (React Router DOM)
+- The user can see a modal add rows to the tables (Not finished)
+
+
+## Stack: 
 - create-react-app / React Hooks
-- Node.js Express.js 
+- Node.js / Express.js 
 - Rest API
-- css modules
+- CSS modules / CSS grid
 
 ## Instructions: 
 
-### (Local)
+### (Run Locally)
 - npm install
 - npm run build
+- node (nodemon) server.js
+
+### (Dev Locally)
+- npm install
+- npm run dev
 - node (nodemon) server.js
 
 ### (Deploy Google App Engine)
 - https://cloud.google.com/appengine/docs/standard/nodejs/building-app/deploying-web-service
 
+## Notes & Issues
+ - Entites page view with no filter is too "heavy". In production a page like that should be paginated
+ - On the asset with id: 12, I had to add the missing property "n_number" with "no data value". 
+ - The form to add 
 
 
-### TASK
+# TASK Description
  Endpoints:
 Assets: https://6y458uslg3.execute-api.eu-west-3.amazonaws.com/elixos/assets
 Entities: https://6y458uslg3.execute-api.eu-west-3.amazonaws.com/elixos/entities
